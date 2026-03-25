@@ -1,13 +1,14 @@
 const axios = require('axios');
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const OPENROUTER_MODEL = 'google/gemini-2.0-flash-exp:free';
+const OPENROUTER_MODEL = 'openai/gpt-3.5-turbo';
 
 const getAIResponse = async (prompt) => {
   try {
     const apiKey = process.env.OPENROUTER_API_KEY;
 
     console.log('OpenRouter API Key:', apiKey ? 'Present' : 'Missing');
+    console.log('Model:', OPENROUTER_MODEL);
     console.log('Prompt:', prompt);
 
     if (!apiKey) {
