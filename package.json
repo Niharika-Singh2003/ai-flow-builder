@@ -1,0 +1,26 @@
+{
+  "name": "ai-flow-builder",
+  "version": "1.0.0",
+  "description": "AI Flow Builder - MERN stack application with React Flow visualization",
+  "main": "server/server.js",
+  "scripts": {
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "keywords": ["mern", "react", "node", "express", "mongodb", "ai", "flow-builder"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-flow-builder.git"
+  },
+  "engines": {
+    "node": ">=20.19.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
