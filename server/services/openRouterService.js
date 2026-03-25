@@ -7,6 +7,9 @@ const getAIResponse = async (prompt) => {
   try {
     const apiKey = process.env.OPENROUTER_API_KEY;
 
+    console.log('OpenRouter API Key:', apiKey ? 'Present' : 'Missing');
+    console.log('Prompt:', prompt);
+
     if (!apiKey) {
       const error = new Error('OpenRouter API key is missing. Check OPENROUTER_API_KEY in .env');
       error.status = 500;
@@ -27,7 +30,7 @@ const getAIResponse = async (prompt) => {
     const { data } = await axios.post(OPENROUTER_URL, payload, {
       headers: {
         Authorization: `Bearer ${apiKey}`,
-        'HTTP-Referer': 'http://localhost:5000',
+        'HTTP-Referer': 'https://ai-flow-builder.onrender.com',
         'X-Title': 'AI Flow Builder',
         'Content-Type': 'application/json',
       },
