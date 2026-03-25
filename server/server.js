@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 
-dotenv.config();
+// Load environment variables from .env file
+dotenv.config({ path: '.env' });
 
 const app = require('./app');
 const connectDB = require('./config/db');
