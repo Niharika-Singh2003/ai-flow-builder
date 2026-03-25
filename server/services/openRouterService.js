@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const OPENROUTER_MODEL = 'google/gemini-2.0-flash-lite-preview-02-05:free';
+const OPENROUTER_MODEL = 'google/gemini-2.0-flash-exp:free';
 
 const getAIResponse = async (prompt) => {
   try {
