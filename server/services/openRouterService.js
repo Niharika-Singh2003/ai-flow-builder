@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const OPENROUTER_MODEL = 'openai/gpt-3.5-turbo';
+const OPENROUTER_MODEL = 'meta-llama/llama-3.1-8b-instruct:free';
 
 const getAIResponse = async (prompt) => {
   try {
